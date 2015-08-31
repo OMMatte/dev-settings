@@ -1,13 +1,12 @@
 [user]
 	name = Mathias Lindblom
-	email = mathias.lindblom@trustly.com
-	signingkey = 8B0EE9F5
+	email = ommatte@gmail.com
 [color]
 	ui = true
 	status = auto
 	branch = auto
 [core]
-	editor = subl
+	editor = sublime
 [alias]
 	log1 = log --pretty=oneline --abbrev-commit
 	s = status
@@ -15,8 +14,5 @@
 	cam = commit -a -m
 	cams = commit -a -S -m
 	pr = pull --rebase
-
-    resign = "!GIT_SEQUENCE_EDITOR=\"sed -i -re 's/^pick /e /'\" git rebase -i; while [ -f \".git/rebase-merge/done\" ]; do git commit --amend --no-edit -S && git rebase --continue || { git rebase --abort; echo  \"\\033[31m####################################\n#  Rebase faild, nothing changed!  #\n####################################\"; }; done"
-
 [push]
 	default = simple

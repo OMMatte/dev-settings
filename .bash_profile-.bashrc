@@ -40,17 +40,6 @@ export PS1='\[\033[36m\]\u\[\033[33;1m\]@\[\033[m\]\h:\[\033[33;1m\]\W$(__git_ps
 
 # WORK RELATED
 
-export WAPI_LOG_KEY=/Users/mathiaslindblom/Documents/mathias_wapi_log.pem
-
-Host dev-server99
-HostName ec2-54-216-140-207.eu-west-1.compute.amazonaws.com
-User ubuntu
-
-alias buildwapi='mvn install && scp /Users/mathiaslindblom/Trustly/trustly-commons/target/trustly-commons-1.0.jar target/wapi-1.0.jar dev-server99:/opt/wapi/jars/worker12/ && ssh dev-server99 '\''/opt/wapi/bin/worker.sh 12 mathias'\'''
-alias getorder="~/bin/getorderbyid -r -i"
-alias getdevorder="~/bin/fetchlastorder ubuntu@ec2-54-216-140-207.eu-west-1.compute.amazonaws.com ~/LOGS"
-
-
 # AUTOMATICALLY ADDED
 
 
