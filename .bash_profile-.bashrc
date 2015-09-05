@@ -37,6 +37,15 @@ source ~/bin/git-prompt.sh
 # Display the current git branch in the command prompt
 export PS1='\[\033[36m\]\u\[\033[33;1m\]@\[\033[m\]\h:\[\033[33;1m\]\W$(__git_ps1 "\[\033[m\] (\[$(parse_git_status)\]%s\[\e[0m\])")\[\033[m\]\$ '
 
+# Alias
+alias gs='git status'
+alias gp='git pull'
+alias gpush= 'git push'
+alias gc='git commit -m'
+alias ga='git add'
+alias gac='git commit -am'
+alias gAc='git add -A && git commit -m'
+
 
 # WORK RELATED
 
