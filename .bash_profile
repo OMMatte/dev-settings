@@ -34,8 +34,8 @@ COLCLEAR="\[\033[0m\]"
  
 
 source ~/bin/git-prompt.sh
-# Display the current git branch in the command prompt
-export PS1='\[\033[36m\]\u\[\033[33;1m\]@\[\033[m\]\h:\[\033[33;1m\]\W$(__git_ps1 "\[\033[m\] (\[$(parse_git_status)\]%s\[\e[0m\])")\[\033[m\]\$ '
+# Sets the look of the prefix in the command prompt. Also displays the current git branch in the command prompt with colors
+export PS1='\[\033[33;1m\]\W$(__git_ps1 "\[\033[m\] (\[$(parse_git_status)\]%s\[\e[0m\])")\[\033[m\]\$ '
 
 # Alias
 alias gs='git status'
