@@ -40,14 +40,23 @@ export PS1='\[\033[36m\]\u\[\033[33;1m\]@\[\033[m\]\h:\[\033[33;1m\]\W$(__git_ps
 # Alias
 alias gs='git status'
 alias gp='git pull'
-alias gpush= 'git push'
+alias gpush='git push'
 alias gc='git commit -m'
 alias ga='git add'
 alias gac='git commit -am'
 alias gAc='git add -A && git commit -m'
+alias gd="git diff"
 
 
-# WORK RELATED
+# EVRY RELATED
+
+function setLocalEvryRepoSettings {
+    git config user.name "Mathias Lindblom"
+    git config user.email "mathias.lindblom@evry.com"
+    git config url."https://".insteadOf git://
+}
+
+alias initEvryRepo=setLocalEvryRepoSettings
 
 # AUTOMATICALLY ADDED
 
