@@ -6,6 +6,7 @@ COLOR_GREEN="\033[0;32m"
 COLOR_OCHRE="\033[38;5;95m"
 COLOR_BLUE="\033[0;34m"
 COLOR_WHITE="\033[0;37m"
+COLOR_BOLD="\e[1m"
 COLOR_RESET="\033[0m"
 COLOR_PINK="\e[95m"
 
@@ -18,7 +19,7 @@ function get_git_color {
   elif [[ $git_status =~ "Your branch is ahead of" ]]; then
     echo -e $COLOR_GREEN
   elif [[ $git_status =~ "working tree clean" ]]; then
-    
+    echo -e $COLOR_BOLD
   else
     echo -e $COLOR_PINK
   fi
