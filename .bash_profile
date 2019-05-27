@@ -5,6 +5,9 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 export GREP_OPTIONS="--color"
 
+# Names the tab-titles in Iterm
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+
 # Source a git completion script
 if [ -f $HOME/bin/git-completion.sh ]; then
        . $HOME/bin/git-completion.sh
@@ -39,6 +42,7 @@ export PS1='\[\033[33;1m\]\W$(__git_ps1 "\[\033[m\] (\[$(parse_git_status)\]%s\[
 
 # Alias
 alias gs='git status'
+alias gcleanrun='git pull; rm -rf node_modules; rm package-lock.json; npm install; npm run dev'
 alias gp='git pull'
 alias gpush='git push'
 alias gc='git commit -m'
@@ -59,18 +63,3 @@ function setLocalEvryRepoSettings {
 alias initEvryRepo=setLocalEvryRepoSettings
 
 # AUTOMATICALLY ADDED
-
-
-##
-# Your previous /Users/mathiaslindblom/.bash_profile file was backed up as /Users/mathiaslindblom/.bash_profile.macports-saved_2014-03-16_at_11:36:56
-##
-
-# MacPorts Installer addition on 2014-04-17_at_11:54:08: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-# Setting PATH for Python 3.4
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
-export PATH
